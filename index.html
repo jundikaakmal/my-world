@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Selamat Ulang Tahun Sayang</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,8 +22,11 @@
 
     <div class="timeline">
 
-      <details>
-        <summary>📅 12 Maret 2023</summary>
+      <details open>
+        <summary>12 Maret 2023</summary>
+        <p class="caption">
+          Hari di mana senyum kamu jadi rumah ternyaman buat aku 💙
+        </p>
         <div class="photos">
           <img src="foto/12032023_1.jpg">
           <img src="foto/12032023_2.jpg">
@@ -28,7 +35,10 @@
       </details>
 
       <details>
-        <summary>📅 5 Agustus 2022</summary>
+        <summary>5 Agustus 2022</summary>
+        <p class="caption">
+          Tawa kecil yang ternyata jadi cerita besar dalam hidupku
+        </p>
         <div class="photos">
           <img src="foto/05082022_1.jpg">
           <img src="foto/05082022_2.jpg">
@@ -36,7 +46,10 @@
       </details>
 
       <details>
-        <summary>📅 20 Januari 2024</summary>
+        <summary>20 Januari 2024</summary>
+        <p class="caption">
+          Semoga semua tanggal ke depan selalu ada kata “kita”
+        </p>
         <div class="photos">
           <img src="foto/20012024_1.jpg">
         </div>
@@ -44,15 +57,30 @@
 
     </div>
 
+    <p class="ending">
+      Aku mungkin tidak sempurna, tapi perasaanku ke kamu selalu utuh 🤍
+    </p>
+
     <p class="footer">
-      Dibuat dengan cinta 💙
+      Music by Bensound.com · Dibuat dengan cinta 💙
     </p>
   </div>
 
-  <!-- SCRIPT: HANYA SATU TANGGAL BISA DIBUKA -->
-  <script>
-    const allDetails = document.querySelectorAll("details");
+  <!-- BACKSOUND -->
+  <audio id="bgm" autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
 
+  <!-- SCRIPT -->
+  <script>
+    const bgm = document.getElementById("bgm");
+    bgm.volume = 0.2;
+
+    document.addEventListener("click", () => {
+      if (bgm.paused) bgm.play();
+    }, { once: true });
+
+    const allDetails = document.querySelectorAll("details");
     allDetails.forEach((detail) => {
       detail.addEventListener("toggle", () => {
         if (detail.open) {
