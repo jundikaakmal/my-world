@@ -5,39 +5,37 @@
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  background: linear-gradient(to bottom, #e6f3ff, #cfe9ff);
-  color: #1e4fa1;
+.main-photos {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.judul {
-  font-family: 'BabyAngel', cursive;
-  font-size: 3.2rem;
-  margin-top: 50px;
-  letter-spacing: 2px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.15);
+.main-photos img {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 25px;
+
+  /* FRAME */
+  border: 8px solid rgba(255, 255, 255, 0.9);
+  background: white;
+
+  /* SHADOW */
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.15),
+    0 0 0 6px rgba(255, 255, 255, 0.4);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.subtitle {
-  font-size: 18px;
-  margin-top: 25px;
+/* efek hover manis */
+.main-photos img:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.2),
+    0 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
-.section-title {
-  font-size: 26px;
-  margin-top: 60px;
-}
 
-.ending {
-  margin-top: 60px;
-  font-size: 17px;
-}
-
-.footer {
-  margin: 40px 0;
-  font-size: 14px;
-  opacity: 0.8;
-}
