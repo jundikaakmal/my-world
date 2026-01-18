@@ -121,3 +121,31 @@ details[open] > .photos {
   font-size: 0.85em;
   opacity: 0.8;
 }
+
+/* FOTO UTAMA */
+.main-photos {
+  margin: 30px auto 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.photo-frame {
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+  transform: translateY(-5px);
+}
+
+.photo-frame img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
