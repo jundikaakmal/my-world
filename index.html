@@ -9,32 +9,62 @@
 <body>
 
   <div class="container">
-    <h1 class="fade-in">Selamat Ulang Tahun Sayang 💙</h1>
-
-    <p class="subtitle fade-in delay-1">
+    <h1>Selamat Ulang Tahun Sayang 💙</h1>
+    <p class="subtitle">
       Terima kasih sudah menjadi bagian terindah dalam hidupku
     </p>
 
-    <!-- TEMPAT VIDEO (NANTI) -->
-    <div class="video-box fade-in delay-2">
-      <p>🎥 Video spesial akan ada di sini</p>
+    <h2>Kenangan Kita 📸</h2>
+
+    <div class="timeline">
+
+      <details>
+        <summary>📅 12 Maret 2023</summary>
+        <div class="photos">
+          <img src="foto/12032023_1.jpg">
+          <img src="foto/12032023_2.jpg">
+          <img src="foto/12032023_3.jpg">
+        </div>
+      </details>
+
+      <details>
+        <summary>📅 5 Agustus 2022</summary>
+        <div class="photos">
+          <img src="foto/05082022_1.jpg">
+          <img src="foto/05082022_2.jpg">
+        </div>
+      </details>
+
+      <details>
+        <summary>📅 20 Januari 2024</summary>
+        <div class="photos">
+          <img src="foto/20012024_1.jpg">
+        </div>
+      </details>
+
     </div>
 
-    <h2 class="fade-in delay-2">Kenangan Kita 📸</h2>
-
-    <div class="gallery">
-      <img src="foto/foto1.jpg" class="photo">
-      <img src="foto/foto2.jpg" class="photo">
-      <img src="foto/foto3.jpg" class="photo">
-      <img src="foto/foto4.jpg" class="photo">
-      <img src="foto/foto5.jpg" class="photo">
-      <!-- tambah foto di bawah ini -->
-    </div>
-
-    <p class="footer fade-in delay-3">
+    <p class="footer">
       Dibuat dengan cinta 💙
     </p>
   </div>
+
+  <!-- SCRIPT: HANYA SATU TANGGAL BISA DIBUKA -->
+  <script>
+    const allDetails = document.querySelectorAll("details");
+
+    allDetails.forEach((detail) => {
+      detail.addEventListener("toggle", () => {
+        if (detail.open) {
+          allDetails.forEach((other) => {
+            if (other !== detail) {
+              other.removeAttribute("open");
+            }
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
