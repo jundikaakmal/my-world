@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'BabyAngel';
+  src: url('font/BabyAngel.ttf') format('truetype');
+}
+
+h1,
+h2 {
+  font-family: 'BabyAngel', cursive;
+}
+
+.section-title {
+  font-family: 'BabyAngel', cursive;
+  font-size: 36px;
+  color: #1e5fd6;
+  margin-bottom: 25px;
+}
+
 /* ===============================
    FONT & WARNA DASAR
 ================================ */
@@ -157,3 +174,4 @@ section {
   color: #4a73b9;
   margin-bottom: 40px;
 }
+
