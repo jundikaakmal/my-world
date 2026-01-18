@@ -1,3 +1,4 @@
+/* ================= FONT BABY ANGEL ================= */
 @font-face {
   font-family: 'BabyAngel';
   src: url('font/BabyAngel.ttf') format('truetype');
@@ -5,48 +6,123 @@
   font-style: normal;
 }
 
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #eaf2ff, #ffffff);
+  color: #333;
+  text-align: center;
+}
+
+/* ================= HEADER ================= */
+header {
+  padding: 60px 20px 30px;
+}
+
+h1 {
+  font-family: 'BabyAngel', cursive;
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+  animation: fadeDown 1.6s ease forwards;
+}
+
+.subtitle {
+  margin-top: 25px;
+  font-size: 1rem;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* ================= FOTO UTAMA ================= */
 .main-photos {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+  gap: 25px;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
 
-/* FOTO UTAMA */
-.main-photos img {
+.photo-frame img {
   width: 240px;
   height: 340px;
   object-fit: cover;
   border-radius: 22px;
-
-  /* FRAME */
   border: 6px solid #ffffff;
   background: white;
-
-  /* SHADOW HALUS */
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-@media (max-width: 768px) {
-  .main-photos {
-    flex-direction: column;
-    align-items: center;
+.photo-frame img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* ================= GALERI ================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.gallery img:nth-child(1) { animation-delay: 0.2s; }
+.gallery img:nth-child(2) { animation-delay: 0.4s; }
+.gallery img:nth-child(3) { animation-delay: 0.6s; }
+
+/* ================= TEKS AKHIR ================= */
+.ending {
+  padding: 40px 20px 10px;
+  font-size: 0.95rem;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.footer {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  padding-bottom: 30px;
+}
+
+/* ================= ANIMASI ================= */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  .main-photos img {
-    width: 220px;
-    height: 300px;
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-/* efek hover manis */
-.main-photos img:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow:
-    0 25px 45px rgba(0, 0, 0, 0.2),
-    0 0 0 8px rgba(255, 255, 255, 0.6);
-}
-
-
-
