@@ -39,20 +39,25 @@
       <img src="foto/20012024_1.jpg">
     </div>
   </section>
+</div>
+    <p class="ending">
+      Aku mungkin tidak sempurna, tetapi perasaan ku padamu selalu utuh dan tak akan pernah luntur 
+    </p>
+  
+    <p class="footer">
+      Made With Love 🤍
+    </p>
+</div>
 
-  <footer>
-    Aku mungkin tidak sempurna, tapi perasaanku ke kamu selalu utuh 🤍
-  </footer>
-
-  <script>
+  <<script>
     const bgm = document.getElementById("bgm");
+    bgm.volume = 0.2;
+
     document.addEventListener("click", () => {
-      if (bgm.paused) {
-        bgm.volume = 0.6;
-        bgm.play();
-      }
+      if (bgm.paused) bgm.play();
     }, { once: true });
   </script>
 
 </body>
 </html>
+
