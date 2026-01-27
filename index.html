@@ -87,5 +87,26 @@
     made with love 🫶🏻
   </p>
 
+  <div id="lightbox" class="lightbox">
+  <img id="lightbox-img">
+</div>
+
+  <script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  document.querySelectorAll(".gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+</script>
+
 </body>
 </html>
+
